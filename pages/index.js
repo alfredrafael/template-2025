@@ -1,23 +1,76 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-
+import { useState } from "react"; // Import useState
+import Head from "next/head";
+import Header from "@components/Header";
+import { useLanguage } from "@components/LanguageContext";
+// import MyButton from "@components/MyButton.jsx";
 export default function Home() {
+  // const [clickCount, setClickCount] = useState(1); // Initialize state for the counter
+  const { isTranslated } = useLanguage(); // Use global language context
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
   return (
-    <div className="container">
+    <>
       <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          {isTranslated ? `Página Web | Hogar` : `Page Name | Home`}
+        </title>
+
+        <meta
+          name="description"
+          content={
+            isTranslated
+              ? `Description of the page in English`
+              : `Descripción de la página en español`
+          }
+        />
+        <link rel="canonical" href={baseUrl} />
       </Head>
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <main className="pageContainer">
+        <Header
+          fontSize={"2rem"}
+          title={
+            <>
+              Welcome to Your <code className="text-red-400">Next.js</code>{" "}
+              Template Page
+            </>
+          }
+          subtitle="Your subtitle (if any) goes here"
+          spanishTitle={
+            <>
+              Bienvenido a tu <code className="text-red-400">Next.js</code>{" "}
+              Página de Plantilla.
+            </>
+          }
+          spanishSubtitle="Tu subtítulo va aquí."
+        />
+        {!isTranslated ? (
+          // English version ////////////////////////////////////////////////////
+          <section className="englishVersion">
+            <p className="md:text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            </p>
+          </section>
+        ) : (
+          // Spanish version ////////////////////////////////////////////////////
+          <section className="spanishVersion">
+            <p className="md:text-lg">
+              Loremo ipsumo dolor sit amet, consectetur adipiscing elit. Sed
+            </p>
+          </section>
+        )}
+        {/* <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+          onClick={() => setClickCount(clickCount + 1)} // Increment counter on click
+        >
+          I have been clicked {clickCount + " Merrill"} times
+        </button>
+        <MyButton
+          onClick={() => setClickCount(clickCount + 1)}
+          color="rebeccaPurple"
+          text={`Click Me! ${clickCount}`}
+        /> */}
       </main>
-
-      <Footer />
-    </div>
-  )
+    </>
+  );
 }
