@@ -22,7 +22,7 @@ export default function LanguageToggle({ onChange }) {
     //   </button>
     // </div>
 
-    <div className="md:-mt-3">
+    <div className="md:-mt-4 md:mb-4 mb-2">
       <div className="relative inline-block">
         <input
           id="language-toggle"
