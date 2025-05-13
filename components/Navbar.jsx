@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import IchthusLogo from "./icons/IchthusLogo";
+// import IchthusLogo from "./icons/IchthusLogo";
+import Image from "next/image";
 
 export default function Navbar() {
   const [opacity, setOpacity] = useState(1);
@@ -17,11 +18,10 @@ export default function Navbar() {
     "/posts": {
       name: "Dropdowns",
       dropdownValues: [
-        { dropdownName: "Dropdown 1", dropDownHref: "/" },
-        { dropdownName: "Dropdown 2", dropDownHref: "/about" },
+        { dropdownName: "Posts", dropDownHref: "/posts" },
+        { dropdownName: "Categories", dropDownHref: "/categories" },
       ],
     },
-    "/somePage": { name: "Data" },
     "/contact": { name: "Contact" },
   };
 
@@ -69,9 +69,20 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-0">
         <div className="flex justify-between items-center h-16">
-          <div className="min-w-12 md:mr-6">
+          {/* <div className="min-w-12 md:mr-6">
             <Link href="/">
               <IchthusLogo color={"white"} />
+            </Link>
+          </div> */}
+          <div className="min-w-12 md:ml-2">
+            <Link href="/">
+              <Image
+                src={
+                  "http://www.alfredorafael.com/wp-content/uploads/2019/02/whileLogoName-e1551079673184.png"
+                }
+                height={70}
+                width={70}
+              />
             </Link>
           </div>
           <div className="flex items-center">
@@ -87,14 +98,14 @@ export default function Navbar() {
                   <Link
                     key={path}
                     href={path}
-                    className="text-white px-3 py-2 rounded-md text-lg font-medium hover:bg-gray-700"
+                    className="text-white px-3 py-2 rounded-md text-lg font-medium border border-transparent hover:border-white"
                   >
                     {item.name}
                   </Link>
                 ) : (
                   <div key={path} className="relative">
                     <button
-                      className="text-white px-3 -mr-2 py-2 rounded-md text-lg font-medium hover:bg-gray-700 flex items-center"
+                      className="text-white px-3 -mr-2 py-2 rounded-md text-lg font-medium border border-transparent hover:border-white flex items-center"
                       onClick={() => toggleDropdown(path)}
                     >
                       {item.name}
@@ -140,10 +151,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="text-lg font-bold flex justify-center items-center w-full md:hidden text-white">
-            <span>Woke</span>
-            <span className="inline-block scale-x-[-1]">y</span>
-            <span>pedia.com</span>
+          <div className="text-lg font-bold flex justify-center items-center w-full md:hidden text-white -ml-3">
+            <span>Title goes here</span>
             <span className="sr-only">Open main menu</span>
           </div>
 

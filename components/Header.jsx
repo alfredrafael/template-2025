@@ -7,7 +7,7 @@ const Header = ({
   subtitle,
   spanishTitle,
   spanishSubtitle,
-  page,
+  extraData,
   fontSize,
 }) => {
   const { isTranslated } = useLanguage(); // Get language from context
@@ -24,9 +24,9 @@ const Header = ({
           <div className="mt-2 md:mt-0 md:text-lg text-gray-600">
             {!isTranslated ? subtitle : spanishSubtitle}
           </div>
-          {page && (
+          {extraData && (
             <>
-              <div className="md:ml-0 md:mt-1 -mt-2 mb-2 md:mb-0">{page}</div>{" "}
+              <div className="mb-3 mt-5 -ml-1">{extraData}</div>{" "}
             </>
           )}
         </div>

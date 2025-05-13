@@ -94,6 +94,15 @@ table {
 
 /* // Custom values ///////////////////// */
 
+@layer utilities {
+  .bg-secondaryColor {
+    background: rgb(117, 115, 191); /* Replace with your desired color */
+  }
+  .hover-secondaryColor:hover {
+    @apply bg-secondaryColor;
+  }
+}
+
 .fullHorizontalLine {
   position: absolute;
   left: 50%;
@@ -103,20 +112,6 @@ table {
   border-top: 1px solid #d3d3d3;
 }
 
-.translate-btn,
-.close-btn {
-  font-weight: bold;
-  color: #2d5e9d;
-  /* color: #0000ff; link blue */
-}
-
-span.modal-trigger,
-.anchorLink {
-  cursor: pointer;
-  color: #2d5e9d;
-  margin: 0 0.25rem;
-}
-
 .container a {
   color: #2d5e9d;
 }
@@ -124,75 +119,9 @@ span.modal-trigger,
   color: #2563eb; /* This is the equivalent of Tailwind's 'text-blue-600' */
 }
 
-span.modal-trigger:hover,
-.anchorLink:hover {
-  color: #2563eb; /* This is the equivalent of Tailwind's 'text-blue-600' */
-}
-
-.popover-trigger {
-  cursor: pointer;
-  color: #2d5e9d;
-  margin: 0 0.3rem;
-}
-
-.popover-trigger:hover {
-  color: #2563eb; /* Equivalent to Tailwind's 'text-blue-600' */
-}
-
 .dividingLine {
   border-top: 1px solid #807e7e;
   margin: 1rem 0;
-}
-
-.dividingLineBubble {
-  border-top: 1px solid #d3d3d3;
-  margin: 1rem 0;
-}
-
-.borderBottomEffect {
-  border-bottom: 1px solid transparent;
-  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2) !important;
-}
-
-.borderTopEffect {
-  border-top: 1px solid transparent;
-  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2) !important;
-}
-
-.popover h3 {
-  font-size: 1.25rem; /* text-xl */
-  font-weight: 500; /* font-medium */
-  letter-spacing: -0.025em; /* tracking-tight */
-  margin-top: 0; /* mt-0 */
-  margin-bottom: 0.7rem; /* mb-2 */
-}
-
-/* // Contact Form ///////////////////// */
-/* .contactForm {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
-} */
-.contactForm {
-  border: 0.3px solid #dadada;
-}
-
-.contactForm input[type="text"],
-.contactForm input[type="email"],
-.contactForm input[type="textarea"],
-.contactForm textarea {
-  background-color: #f2f2f2;
-  border: 0.5px solid #939393;
-  border-radius: 5px;
-  padding-left: 1em;
-}
-.contactForm textarea {
-  padding-top: 1em;
-  height: 10em;
-}
-
-.ftNoteItem a {
-  font-weight: normal !important;
 }
 
 .no-scrollbar {
@@ -203,15 +132,6 @@ span.modal-trigger:hover,
   display: none;
 }
 
-.bubbleBorder {
-  border: 0.1rem solid #2e3032;
-}
-
-.claimFactCard .bubbleBorder {
-  border: 0.1rem solid #2e3032;
-}
-
-/* // Custom values ///////////////////// */
 .pageContainer {
   max-width: 72rem; /* Tailwind's 6xl = 1152px = 72rem */
   padding-left: 0.5rem; /* px-2 = padding-left & padding-right: 0.5rem */
