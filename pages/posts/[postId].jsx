@@ -4,6 +4,7 @@ import { postsData } from "../../data/postsData";
 import LanguageToggleButton from "../../components/LanguageToggleButton";
 import { useLanguage } from "../../components/LanguageContext";
 import Head from "next/head";
+import Link from "next/link";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -62,21 +63,32 @@ export default function PostPage({ post }) {
           subtitle={isTranslated ? post.spanishSubtitle : post.subtitle}
           spanishTitle={post.spanishTitle}
           spanishSubtitle={post.spanishSubtitle}
-          extraData={
-            <div className="flex flex-wrap gap-2">
-              {post.category.map((category, index) => (
-                <span
-                  key={index}
-                  className="text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1"
-                >
-                  {isTranslated ? post.spanishCategory[index] : category}
-                </span>
-              ))}
-            </div>
-          }
           fontSize="text-3xl md:text-4xl"
         />
         <PostContent />
+        <section className="my-12">
+          <div className="text-sm mb-4">
+            {isTranslated
+              ? "Éste artículo es parte de las siguientes categorías:"
+              : "Post is part the following categories:"}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {post.category.map((category, index) => {
+              const categorySlug = isTranslated
+                ? post.spanishCategory[index]
+                : category;
+              return (
+                <Link
+                  key={index}
+                  href={`/categories/${encodeURIComponent(categorySlug)}`}
+                  className="text-sm text-gray-500 bg-gray-200 rounded-full px-2 py-1 hover:bg-gray-300 transition"
+                >
+                  {categorySlug}
+                </Link>
+              );
+            })}
+          </div>
+        </section>
       </div>
     </>
   );
