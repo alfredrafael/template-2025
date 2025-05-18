@@ -16,7 +16,7 @@ function Application({ Component, pageProps }) {
         />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Your site names goes here" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/faviconGoesHere.png" />
       </Head>
       <LanguageProvider>
         <Navbar />
