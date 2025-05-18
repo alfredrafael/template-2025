@@ -43,6 +43,7 @@ export default function Home() {
             </>
           }
           spanishSubtitle="Tu subtítulo va aquí."
+          translateBtn
         />
         {!isTranslated ? (
           // English version ////////////////////////////////////////////////////

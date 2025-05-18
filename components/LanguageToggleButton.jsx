@@ -22,7 +22,7 @@ export default function LanguageToggle({ onChange }) {
     //   </button>
     // </div>
 
-    <div className="md:-mt-4 md:mb-4 mb-2">
+    <>
       <div className="relative inline-block">
         <input
           id="language-toggle"
@@ -35,7 +35,7 @@ export default function LanguageToggle({ onChange }) {
         />
         <label
           htmlFor="language-toggle"
-          className="block relative cursor-pointer w-[7rem] md:w-[10rem] h-8 bg-[#040182] rounded-full p-0.1"
+          className="block relative cursor-pointer w-[7rem] md:w-[10rem] h-6 bg-[#040182] rounded-full p-0.1"
         >
           <span className="sr-only">Toggle language</span>
           <span
@@ -44,14 +44,14 @@ export default function LanguageToggle({ onChange }) {
             }`}
           ></span>
           <span
-            className={`block absolute top-1 left-1 bottom-1 w-[calc(50%-0.25rem)] bg-white rounded-full transition-all duration-200 ${
+            className={`block absolute top-[.23rem] left-1 bottom-1 w-[calc(50%-0.25rem)] bg-white rounded-full transition-all duration-200 ${
               isEnglish ? "translate-x-[calc(100%)]" : ""
             }`}
           ></span>
         </label>
 
         <span
-          className={`absolute top-[.5rem] left-0 w-1/2 text-center pointer-events-none font-bold text-xs uppercase ${
+          className={`absolute top-[.23rem] left-0 w-1/2 text-center pointer-events-none font-bold text-xs uppercase ${
             isEnglish ? "text-white" : "text-[#040182]"
           }`}
         >
@@ -60,7 +60,7 @@ export default function LanguageToggle({ onChange }) {
         </span>
 
         <span
-          className={`absolute top-[.5rem] right-0 w-1/2 text-center pointer-events-none font-bold text-xs uppercase ${
+          className={`absolute top-[.23rem] right-0 w-1/2 text-center pointer-events-none font-bold text-xs uppercase ${
             isEnglish ? "text-[#040182]" : "text-white"
           }`}
         >
@@ -68,6 +68,6 @@ export default function LanguageToggle({ onChange }) {
           <span className="md:hidden text-md">EN 🇬🇧</span>
         </span>
       </div>
-    </div>
+    </>
   );
 }

@@ -42,32 +42,13 @@ export default function ArticlesWithSpecificCategoryPage() {
         />
         <link rel="canonical" href={baseUrl} />
       </Head>
-      {/* <PageHeader
-        title={`Woke Claims in the '${category}' Category`}
-        subtitle={"Explore our posts categorized by topics."}
-        spanishTitle={`Afirmaciones Woke en la categoría de ${category}`}
-        spanishSubtitle={
-          "Explora nuestras publicaciones clasificadas por categorías."
-        }
-      /> */}
+      <Header
+        title={`Posts in the '${category}' category`}
+        subtitle={"Explore posts categorized by topics."}
+        spanishTitle={`Artículos en la categoría de ${category}`}
+        spanishSubtitle={"Explora publicaciones clasificadas por categorías."}
+      />
       <main className="pageContainer">
-        <header className="mt-20 md:mt-24 container max-w-6xl flex flex-col lg:mx-auto mb-8">
-          <div className="md:flex justify-between">
-            <div>
-              <h1 className="">
-                {!isTranslated
-                  ? `Posts in the Category of '${category}'`
-                  : `Artículos en la categoría de ${category}`}
-              </h1>
-              <div className="mb-3 md:mb-0 md:text-lg text-gray-600">
-                {!isTranslated
-                  ? "Explore our posts categorized by topics"
-                  : `Artículos en la categoría de ${category}`}
-              </div>
-            </div>
-          </div>
-        </header>
-
         {filteredPosts.length > 0 ? (
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
             {filteredPosts.map((post) => (

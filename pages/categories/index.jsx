@@ -30,9 +30,10 @@ const AllCategories = () => {
           subtitle={"Explore all categories"}
           spanishTitle={"Todas las categorías"}
           spanishSubtitle={"Explora todas las categorías"}
+          translateBtn
         />
 
-        <div className="container max-w-6xl px-6 flex flex-col lg:mx-auto pt-6">
+        <div className="container max-w-6xl flex flex-col lg:mx-auto pt-6">
           {categoriesData.length > 0 ? (
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
               {categoriesData.map((category) => (

@@ -1,15 +1,3 @@
-// import styles from './Footer.module.css'
-
-// export default function Footer() {
-//   return (
-//     <>
-//       <footer className={styles.footer}>
-//         <img src="/logo-netlify.svg" alt="Netlify Logo" className={styles.logo} />
-//       </footer>
-//     </>
-//   )
-// }
-
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "./LanguageContext";
@@ -23,10 +11,10 @@ export default function Footer() {
         <section>
           <ul className="text-sm mt-8 flex flex-col space-y-2  md:flex-row md:space-x-4 md:space-y-0  pl-2">
             <li>
-              <Link href="/some-url">Some link</Link>
+              <Link href="/about">Some link</Link>
             </li>
             <li>
-              <Link href="/another-link">Another Link</Link>
+              <Link href="/">Another Link</Link>
             </li>
           </ul>
 
