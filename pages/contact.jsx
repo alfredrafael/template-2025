@@ -31,6 +31,8 @@ const About = () => {
           subtitle="Get in touch with us"
           spanishTitle="Contacto"
           spanishSubtitle="Ponte en contacto con nosotros"
+          translateBtn
+          searchBar
         />
         <div className="">
           {!isTranslated ? (

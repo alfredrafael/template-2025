@@ -2,6 +2,7 @@ import "@styles/globals.css";
 import Head from "next/head";
 import Footer from "@components/Footer";
 import { LanguageProvider } from "@components/LanguageContext";
+import SearchBar from "@components/SearchBar";
 
 import Navbar from "@components/Navbar";
 

@@ -17,6 +17,8 @@ export default function AllPostsPage() {
         subtitle="Your subtitle (if any) goes here"
         spanishTitle={<>Todos los artículos</>}
         spanishSubtitle="Tu subtítulo (si alguno) va aquí."
+        translateBtn
+        searchBar
       />
 
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-y-8 gap-y-6">

@@ -31,6 +31,7 @@ const About = () => {
           subtitle="Why it exists, and what it aims to achieve."
           spanishTitle="Sobre esta página web"
           spanishSubtitle="Por qué existe, y qué pretende lograr."
+          translateBtn
         />
         <div className="">
           {!isTranslated ? (

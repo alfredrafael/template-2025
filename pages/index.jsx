@@ -2,7 +2,8 @@ import { useState } from "react"; // Import useState
 import Head from "next/head";
 import Header from "@components/Header";
 import { useLanguage } from "@components/LanguageContext";
-// import MyButton from "@components/MyButton.jsx";
+import SearchBar from "@components/SearchBar";
+
 export default function Home() {
   // const [clickCount, setClickCount] = useState(1); // Initialize state for the counter
   const { isTranslated } = useLanguage(); // Use global language context
@@ -44,6 +45,7 @@ export default function Home() {
           }
           spanishSubtitle="Tu subtítulo va aquí."
           translateBtn
+          searchBar
         />
         {!isTranslated ? (
           // English version ////////////////////////////////////////////////////

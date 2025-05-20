@@ -1,6 +1,8 @@
 import React from "react";
 import LanguageToggleButton from "@components/LanguageToggleButton";
 import { useLanguage } from "@components/LanguageContext";
+import SearchBar from "@components/SearchBar";
+
 const PageHeader = ({
   title,
   subtitle,
@@ -9,11 +11,18 @@ const PageHeader = ({
   page,
   translateBtn,
   translateBtnBottom,
+  searchBar,
 }) => {
   const { isTranslated } = useLanguage(); // Get language from context
 
   return (
     <header className="mt-20 md:mt-24 container max-w-6xl flex flex-col lg:mx-auto md:mb-6 mb-4">
+      {searchBar && (
+        <div className="mb-2 md:mb-4">
+          <SearchBar placeholder={isTranslated ? "Búsqueda" : "Search"} />
+        </div>
+      )}
+
       <div className="">
         <div>
           <div className="mb-3 md:mb-0 relative">
@@ -26,7 +35,7 @@ const PageHeader = ({
               {!isTranslated ? title : spanishTitle}
             </h1>
           </div>
-          <div className="mb-3 md:mb-0 md:text-lg text-gray-600">
+          <div className="mb-3 md:mb-1 md:text-lg text-gray-600">
             {!isTranslated ? subtitle : spanishSubtitle}
           </div>
           {page && (
@@ -36,7 +45,7 @@ const PageHeader = ({
           )}
         </div>
         {translateBtnBottom && (
-          <div className="md:pt-3">
+          <div className="pt-2 md:pt-3 md:-ml-1">
             <LanguageToggleButton />
           </div>
         )}
