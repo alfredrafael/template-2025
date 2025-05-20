@@ -92,7 +92,7 @@ export default function SearchBar({ placeholder = "Search..." }) {
         {/* 3) Search button */}
         <button
           type="submit"
-          className="absolute right-2 bottom-2 px-4 rounded-3xl bg-gray-100"
+          className="absolute bottom-2 px-4 rounded-3xl bg-gray-100 right-2.5 top-2 hover:bg-gray-200 text-sm font-medium transition-colors border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent"
         >
           Search
         </button>
@@ -115,10 +115,3 @@ export default function SearchBar({ placeholder = "Search..." }) {
     </form>
   );
 }
-
-//  <button
-//           type="submit"
-//           className="absolute right-2.5 bottom-2 top-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-3xl text-sm font-medium transition-colors border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent"
-//         >
-//           Search
-//         </button>
