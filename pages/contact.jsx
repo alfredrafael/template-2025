@@ -32,7 +32,6 @@ const About = () => {
           spanishTitle="Contacto"
           spanishSubtitle="Ponte en contacto con nosotros"
           translateBtn
-          searchBar
         />
         <div className="">
           {!isTranslated ? (

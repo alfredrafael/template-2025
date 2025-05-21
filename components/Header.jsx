@@ -10,7 +10,6 @@ const PageHeader = ({
   spanishSubtitle,
   page,
   translateBtn,
-  translateBtnBottom,
   searchBar,
 }) => {
   const { isTranslated } = useLanguage(); // Get language from context
@@ -27,7 +26,7 @@ const PageHeader = ({
         <div>
           <div className="mb-3 md:mb-0 relative">
             {translateBtn && (
-              <div className="float-right pt-1.5">
+              <div className="float-right pt-1.5 hidden md:inline-block">
                 <LanguageToggleButton />
               </div>
             )}
@@ -44,8 +43,8 @@ const PageHeader = ({
             </>
           )}
         </div>
-        {translateBtnBottom && (
-          <div className="pt-2 md:pt-3 md:-ml-1">
+        {translateBtn && (
+          <div className="md:hidden pt-2 md:pt-3 md:-ml-1">
             <LanguageToggleButton />
           </div>
         )}

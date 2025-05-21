@@ -101,7 +101,7 @@ export default function SearchBar({ placeholder = "Search..." }) {
 
         {/* 4) suggestions dropdown */}
         {isFocused && suggestions.length > 0 && (
-          <ul className="absolute z-20 pt-4 -mt-2 top-full left-0 right-0 bg-white border-l border-r rounded-b-xl max-h-60 overflow-y-auto shadow-lg">
+          <ul className="absolute z-20 pt-4 pb-2 -mt-2 top-full left-0 right-0 bg-white border-l border-r rounded-b-xl max-h-60 overflow-y-auto shadow-lg">
             {suggestions.map((post) => (
               <li
                 key={post.id}

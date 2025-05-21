@@ -31,6 +31,7 @@ const AllCategories = () => {
           spanishTitle={"Todas las categorías"}
           spanishSubtitle={"Explora todas las categorías"}
           translateBtn
+          searchBar
         />
 
         <div className="container max-w-6xl flex flex-col lg:mx-auto pt-6">

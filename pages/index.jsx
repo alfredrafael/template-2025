@@ -45,7 +45,6 @@ export default function Home() {
           }
           spanishSubtitle="Tu subtítulo va aquí."
           translateBtn
-          searchBar
         />
         {!isTranslated ? (
           // English version ////////////////////////////////////////////////////

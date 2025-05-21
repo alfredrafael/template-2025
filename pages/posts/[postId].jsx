@@ -64,7 +64,7 @@ export default function PostPage({ post }) {
           spanishTitle={post.spanishTitle}
           spanishSubtitle={post.spanishSubtitle}
           fontSize="text-3xl md:text-4xl"
-          translateBtnBottom
+          translateBtn
           searchBar
         />
         <hr className="mb-6 mt-6 border-gray-300" />

@@ -47,6 +47,7 @@ export default function ArticlesWithSpecificCategoryPage() {
         subtitle={"Explore posts categorized by topics."}
         spanishTitle={`Artículos en la categoría de ${category}`}
         spanishSubtitle={"Explora publicaciones clasificadas por categorías."}
+        searchBar
       />
       <main className="pageContainer">
         {filteredPosts.length > 0 ? (
