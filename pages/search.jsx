@@ -49,6 +49,8 @@ export default function SearchPage() {
                     title={post.title}
                     subtitle={post.subtitle}
                     image={post.featuredImage}
+                    imagePosition="right"
+                    size="medium"
                   />
                 ) : (
                   <PostCard2
@@ -57,34 +59,6 @@ export default function SearchPage() {
                     image={post.featuredImage}
                     spansihTitle={post.spanishTitle}
                   />
-                  // <div className="flex justify-between">
-                  //   <div className="textContainer">
-                  //     <h2 className="mb-2 font-bold">{post.title}</h2>
-                  //     <p>{post.subtitle}</p>
-                  //   </div>
-                  //   <div className="imageContainer">
-                  //     <Image
-                  //       src={post.featuredImage}
-                  //       alt={`Featured image for the ${post.title} post`}
-                  //       width={100}
-                  //       height={100}
-                  //       className="rounded-lg max-h-[5rem] ml-3"
-                  //     />
-                  //   </div>
-                  // </div>
-                  // <div className="flex justify-between">
-                  //   <div>
-                  //     <h2 className="mb-2 font-bold">{post.spanishTitle}</h2>
-                  //     <p>{post.spanishSubtitle}</p>
-                  //   </div>
-                  //   <Image
-                  //     src={post.featuredImage}
-                  //     alt={`Imagen para el artículo titulado ${post.spanishTitle}`}
-                  //     width={100}
-                  //     height={100}
-                  //     className="rounded-lg max-h-[5rem] ml-3"
-                  //   />
-                  // </div>
                 )}
               </Link>
             </li>

@@ -1,32 +1,98 @@
-import React from "react";
-import Image from "next/image";
-import { useLanguage } from "./LanguageContext";
+"use client";
 
-const PostCard2 = ({ title, subtitle, image, spansihTitle }) => {
+import { useState } from "react";
+import Image from "next/image";
+import { useLanguage } from "@components/LanguageContext";
+
+export default function PostCard2({
+  title,
+  subtitle,
+  image = "https://placecats.com/300/200",
+  spanishTitle,
+  className = "",
+  imagePosition = "right",
+  size = "medium",
+  onClick,
+}) {
   const { isTranslated } = useLanguage(); // Get language state from context
+  const [imageError, setImageError] = useState(false);
+
+  // Size mappings
+  const sizeClasses = {
+    small: {
+      card: "p-3 gap-3",
+      image: "w-16 h-16",
+      title: "text-sm font-semibold line-clamp-1",
+      subtitle: "text-xs line-clamp-2",
+    },
+    medium: {
+      card: "p-4 gap-4",
+      image: "w-20 h-20 sm:w-24 sm:h-24",
+      title: "text-base font-bold line-clamp-2",
+      subtitle: "text-sm line-clamp-2",
+    },
+    large: {
+      card: "p-5 gap-5",
+      image: "w-24 h-24 sm:w-32 sm:h-32",
+      title: "text-lg font-bold line-clamp-2",
+      subtitle: "text-base line-clamp-3",
+    },
+  };
+
+  const altText = !isTranslated
+    ? `Featured image for the ${title} post`
+    : `Imagen para el artículo titulado ${spanishTitle || title}`;
+
+  // Build className strings using template literals instead of cn
+  const cardClasses = `
+    flex rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
+    border border-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 
+    group cursor-pointer ${
+      imagePosition === "left" ? "flex-row-reverse" : "flex-row"
+    } 
+    ${sizeClasses[size].card} ${className}
+  `
+    .trim()
+    .replace(/\s+/g, " "); // Trim whitespace and normalize spaces
+
+  const titleClassName = `
+    ${sizeClasses[size].title} text-gray-900 dark:text-gray-100 
+    group-hover:underline dark:group-hover:text-blue-400 transition-colors
+  `
+    .trim()
+    .replace(/\s+/g, " ");
+
+  const subtitleClasses = `
+    ${sizeClasses[size].subtitle} text-gray-600 dark:text-gray-300 mt-1
+  `
+    .trim()
+    .replace(/\s+/g, " ");
+
+  const imageClasses = `
+    ${sizeClasses[size].image} object-cover rounded-lg transition-transform group-hover:scale-105
+  `
+    .trim()
+    .replace(/\s+/g, " ");
+
   return (
-    <>
-      <div className="flex justify-between rounded-xl py-4 max-h-[10rem] pl-6 pr-4 bg-white highlight-shadow shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div className="textContainer">
-          <h2 className="mb-2 font-bold">{title}</h2>
-          <p>{subtitle}</p>
-        </div>
-        <div className="imageContainer ml-3 shrink-0">
+    <div className={cardClasses} onClick={onClick}>
+      <div className="flex-1 min-w-0">
+        <h2 className={titleClassName}>{title}</h2>
+        {subtitle && <p className={subtitleClasses}>{subtitle}</p>}
+      </div>
+
+      {image && !imageError && (
+        <div className="flex-shrink-0 relative overflow-hidden rounded-lg">
           <Image
-            src={image}
-            alt={
-              !isTranslated
-                ? `Featured image for the ${title} post`
-                : `Imagen para el artículo titulado ${spansihTitle}`
-            }
-            width={100}
-            height={100}
-            className="rounded-lg max-h-[6rem] md:max-h-[4rem]"
+            src={image || "https://placecats.com/300/200"}
+            alt={altText}
+            width={imagePosition === "left" ? 100 : 120}
+            height={imagePosition === "left" ? 100 : 120}
+            className={imageClasses}
+            onError={() => setImageError(true)}
           />
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
-};
-
-export default PostCard2;
+}
