@@ -4,8 +4,10 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router"; // or 'next/navigation'
 import Link from "next/link";
 import { postsData } from "../data/postsData";
+import { useLanguage } from "@components/LanguageContext";
 
 export default function SearchBar({ placeholder = "Search..." }) {
+  const { isTranslated } = useLanguage();
   const [query, setQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const router = useRouter();
@@ -41,7 +43,7 @@ export default function SearchBar({ placeholder = "Search..." }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full mx-auto max-w-[72rem] relative"
+      className="w-full mx-auto relative"
       ref={containerRef}
     >
       <div className="relative w-full">
@@ -65,7 +67,7 @@ export default function SearchBar({ placeholder = "Search..." }) {
         </div>
         <input
           type="search"
-          className="w-full py-2 pl-10 pr-20 rounded-3xl border focus:outline-none"
+          className="w-full py-2 pl-10 pr-20 rounded-xl border focus:outline-none"
           placeholder={placeholder}
           value={query}
           onChange={(e) => {
@@ -92,21 +94,29 @@ export default function SearchBar({ placeholder = "Search..." }) {
         {/* 3) Search button */}
         <button
           type="submit"
-          className="absolute bottom-2 px-4 rounded-3xl bg-gray-100 right-2.5 top-2 hover:bg-gray-200 text-sm font-medium transition-colors border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent"
+          className="absolute bottom-2 px-4 rounded-lg bg-gray-100 right-2.5 top-2 hover:bg-gray-200 text-sm font-medium transition-colors border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent"
         >
           Search
         </button>
 
         {/* 4) suggestions dropdown */}
         {isFocused && suggestions.length > 0 && (
-          <ul className="absolute z-20 top-full left-0 right-0 bg-white border rounded-b-3xl max-h-60 overflow-y-auto shadow-lg">
+          <ul className="absolute z-20 pt-4 -mt-2 top-full left-0 right-0 bg-white border-l border-r rounded-b-xl max-h-60 overflow-y-auto shadow-lg">
             {suggestions.map((post) => (
               <li
                 key={post.id}
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
               >
                 {/* link directly into each post’s page */}
-                <Link href={`/posts/${post.id}`}>{post.title}</Link>
+                <Link href={`/posts/${post.id}`}>
+                  {!isTranslated ? (
+                    <>
+                      <span className="text-gray-600">{post.title}</span>
+                    </>
+                  ) : (
+                    <span className="text-gray-500">{post.spanishTitle}</span>
+                  )}
+                </Link>
               </li>
             ))}
           </ul>
