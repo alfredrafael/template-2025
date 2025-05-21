@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/Header";
 import Link from "next/link";
 import Head from "next/head";
-import PostCard1 from "@components/PostCard1";
 import { categories } from "../../data/postsData";
 import { useLanguage } from "../../components/LanguageContext";
 import { categoriesData } from "../../data/categoriesData";
