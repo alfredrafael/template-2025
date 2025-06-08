@@ -2,7 +2,7 @@ import "@styles/globals.css";
 import Head from "next/head";
 import Footer from "@components/Footer";
 import { LanguageProvider } from "@components/LanguageContext";
-import SearchBar from "@components/SearchBar";
+import { navItems } from "../data/navbarData";
 
 import Navbar from "@components/Navbar";
 
@@ -20,7 +20,12 @@ function Application({ Component, pageProps }) {
         <link rel="icon" href="/faviconGoesHere.png" />
       </Head>
       <LanguageProvider>
-        <Navbar />
+        <Navbar
+          navItems={navItems}
+          bgColor={"#040182"}
+          dropDownBg={"#37358c"}
+          dropDownBgHover={"#222080"}
+        />
         <Component {...pageProps} />
         <Footer />
       </LanguageProvider>

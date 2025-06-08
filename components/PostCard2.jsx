@@ -32,10 +32,16 @@ export default function PostCard2({
       subtitle: "text-sm line-clamp-2",
     },
     large: {
-      card: "p-5 gap-5",
+      card: "p-4 gap-5",
       image: "w-24 h-24 sm:w-32 sm:h-32",
-      title: "text-lg font-bold line-clamp-2",
+      title: "text-lg md:text-xl md:mt-4 mt-0 font-bold line-clamp-2",
       subtitle: "text-base line-clamp-3",
+    },
+    custom: {
+      card: "pt-3 pr-3 pb-3 pl-4 gap-3",
+      image: "w-20 h-20 sm:w-32 sm:h-32",
+      title: "text-lg md:text-2xl line-clamp-2 -mt-1 md:mt-4",
+      subtitle: "text-sm md:text-base line-clamp-2",
     },
   };
 
@@ -45,8 +51,8 @@ export default function PostCard2({
 
   // Build className strings using template literals instead of cn
   const cardClasses = `
-    flex rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
-    border border-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 
+    flex rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out 
+    border border-gray-300 dark:border-gray-700 dark:hover:border-gray-600 
     group cursor-pointer ${
       imagePosition === "left" ? "flex-row-reverse" : "flex-row"
     } 
@@ -55,9 +61,9 @@ export default function PostCard2({
     .trim()
     .replace(/\s+/g, " "); // Trim whitespace and normalize spaces
 
-  const titleClassName = `
+  const titleClasses = `
     ${sizeClasses[size].title} text-gray-900 dark:text-gray-100 
-    group-hover:underline dark:group-hover:text-blue-400 transition-colors
+    group-hover:text-gray-900 dark:group-hover:text-blue-400 transition-colors text-medium mt-1 font-serif text-base
   `
     .trim()
     .replace(/\s+/g, " ");
@@ -77,8 +83,8 @@ export default function PostCard2({
   return (
     <div className={cardClasses} onClick={onClick}>
       <div className="flex-1 min-w-0">
-        <h2 className={titleClassName}>{title}</h2>
-        {subtitle && <p className={subtitleClasses}>{subtitle}</p>}
+        <h2 className={titleClasses}>{title}</h2>
+        {subtitle && <span className={subtitleClasses}>{subtitle}</span>}
       </div>
 
       {image && !imageError && (
