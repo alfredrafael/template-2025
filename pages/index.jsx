@@ -2,7 +2,6 @@ import { useState } from "react"; // Import useState
 import Head from "next/head";
 import Header from "@components/Header";
 import { useLanguage } from "@components/LanguageContext";
-import SearchBar from "@components/SearchBar";
 
 export default function Home() {
   // const [clickCount, setClickCount] = useState(1); // Initialize state for the counter
