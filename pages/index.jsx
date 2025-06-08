@@ -50,14 +50,18 @@ export default function Home() {
           // English version ////////////////////////////////////////////////////
           <section className="englishVersion">
             <p className="md:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim
             </p>
           </section>
         ) : (
           // Spanish version ////////////////////////////////////////////////////
           <section className="spanishVersion">
             <p className="md:text-lg">
-              Loremo ipsumo dolor sit amet, consectetur adipiscing elit. Sed
+              Loremo ipsumo dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim
             </p>
           </section>
         )}
