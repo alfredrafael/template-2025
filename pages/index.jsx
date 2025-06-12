@@ -1,10 +1,8 @@
-import { useState } from "react"; // Import useState
 import Head from "next/head";
 import Header from "@components/Header";
 import { useLanguage } from "@components/LanguageContext";
 
 export default function Home() {
-  // const [clickCount, setClickCount] = useState(1); // Initialize state for the counter
   const { isTranslated } = useLanguage(); // Use global language context
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 

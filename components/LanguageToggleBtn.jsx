@@ -47,10 +47,10 @@ export default function LanguageToggleBtn({ onChange }) {
         {/* make sure your labels sit _under_ that overlay */}
         <div className="flex w-full justify-between items-center px-2 text-xs font-bold font-sans">
           <span className={isEnglish ? "text-slate-800" : "text-slate-600"}>
-            ES
+            🇪🇸
           </span>
           <span className={isEnglish ? "text-slate-600" : "text-slate-800"}>
-            EN
+            🇬🇧
           </span>
         </div>
       </label>

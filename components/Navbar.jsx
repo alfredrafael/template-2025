@@ -97,14 +97,14 @@ export default function Navbar({
                 <Link
                   key={path}
                   href={path}
-                  className="rounded-md px-3 py-2 text-lg font-medium font-serif text-white hover:text-white border border-transparent hover:border-white transition-colors "
+                  className="rounded-md px-3 py-2 text-lg font-medium font-serif text-white hover:text-white border border-transparent hover:border-gray-400 transition-colors "
                 >
                   {item.name}
                 </Link>
               ) : (
                 <div key={path} className="relative">
                   <button
-                    className="flex items-center rounded-md pl-3 py-2 text-lg font-medium font-serif text-white transition-colors border border-transparent hover:border-white"
+                    className="flex items-center rounded-md pl-3 py-2 text-lg font-medium font-serif text-white transition-colors border border-transparent hover:border-gray-400"
                     onClick={() => toggleDropdown(path)}
                     aria-expanded={openDropdownKey === path}
                   >

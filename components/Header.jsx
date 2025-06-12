@@ -24,14 +24,14 @@ const PageHeader = ({
     .replace(/\s+/g, " ");
 
   const titleClasses = `
-    mt-0 text-3xl text-gray-900 dark:text-gray-100
+    mt-0 text-3xl text-gray-900
     mb-2 transition-colors font-serif flex-1
   `
     .trim()
     .replace(/\s+/g, " ");
 
   const subtitleClasses = `
-    text-base md:text-base text-gray-600 dark:text-gray-300 mb-2
+    text-base md:text-base text-gray-600 mb-2
   `
     .trim()
     .replace(/\s+/g, " ");

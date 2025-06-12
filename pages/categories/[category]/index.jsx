@@ -52,7 +52,7 @@ export default function ArticlesWithSpecificCategoryPage() {
         />
         <div className="mb-4"></div>
         {filteredPosts.length > 0 ? (
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 list-none">
             {filteredPosts.map((post) => (
               <li>
                 <Link

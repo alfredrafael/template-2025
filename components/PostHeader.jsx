@@ -15,14 +15,14 @@ export default function PostHeader({ post, className = "" }) {
     .replace(/\s+/g, " ");
 
   const titleClasses = `
-    mt-0 md:mt-6 text-2xl text-gray-900 dark:text-gray-100
+    mt-0 md:mt-6 text-2xl text-gray-900 
     mb-2 transition-colors font-medium font-serif flex-1
   `
     .trim()
     .replace(/\s+/g, " ");
 
   const subtitleClasses = `
-    text-base md:text-lg text-gray-600 dark:text-gray-300 mb-2
+    text-base md:text-lg text-gray-600 mb-2
   `
     .trim()
     .replace(/\s+/g, " ");
@@ -71,7 +71,7 @@ export default function PostHeader({ post, className = "" }) {
             )}
           </div>
         </div>
-        <hr className="border-gray-300 dark:border-gray-700 mt-2 mb-4" />
+        <hr className="border-gray-300 mt-2 mb-4" />
       </div>
 
       {/* Tablet and desktop layout */}
@@ -120,7 +120,7 @@ export default function PostHeader({ post, className = "" }) {
             </div>
           </div>
         </div>
-        <hr className="border-gray-300 dark:border-gray-700 mt-3 mb-4" />
+        <hr className="border-gray-300mt-3 mb-4" />
       </div>
     </header>
   );

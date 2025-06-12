@@ -39,7 +39,7 @@ const AllCategories = () => {
               {categoriesData.map((category) => (
                 <li
                   key={category.categoryName}
-                  className="shadow-xl rounded-3xl border hover:shadow-2xl transition duration-300 ease-in-out"
+                  className="shadow-xl rounded-3xl border hover:shadow-2xl transition duration-300 ease-in-out list-none"
                 >
                   <Link
                     href={`/categories/${category.categoryName}`}

@@ -52,7 +52,7 @@ export default function PostCard2({
   // Build className strings using template literals instead of cn
   const cardClasses = `
     flex rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out 
-    border border-gray-300 dark:border-gray-700 dark:hover:border-gray-600 
+    border border-gray-300 
     group cursor-pointer ${
       imagePosition === "left" ? "flex-row-reverse" : "flex-row"
     } 
@@ -62,14 +62,14 @@ export default function PostCard2({
     .replace(/\s+/g, " "); // Trim whitespace and normalize spaces
 
   const titleClasses = `
-    ${sizeClasses[size].title} text-gray-900 dark:text-gray-100 
-    group-hover:text-gray-900 dark:group-hover:text-blue-400 transition-colors text-medium mt-1 font-serif text-base
+    ${sizeClasses[size].title} text-gray-900  
+    group-hover:text-gray-900 transition-colors text-medium mt-1 font-serif text-base
   `
     .trim()
     .replace(/\s+/g, " ");
 
   const subtitleClasses = `
-    ${sizeClasses[size].subtitle} text-gray-600 dark:text-gray-300 mt-1
+    ${sizeClasses[size].subtitle} text-gray-600 mt-1
   `
     .trim()
     .replace(/\s+/g, " ");

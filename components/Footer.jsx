@@ -9,12 +9,16 @@ export default function Footer() {
     <footer className="borderTopEffect w-full bottom-0 left-0 bg-[#040182] text-white mt-8">
       <div className="mx-auto px-4 md:px-0 flex-auto min-w-0 flex flex-col my-auto max-w-6xl">
         <section>
-          <ul className="text-sm mt-8 flex flex-col space-y-2  md:flex-row md:space-x-4 md:space-y-0  pl-2">
+          <ul className="text-sm mt-8 flex flex-col space-y-2  md:flex-row md:space-x-4 md:space-y-0  pl-2 list-none ">
             <li>
-              <Link href="/about">Some link</Link>
+              <Link href="/about" className="text-white hover:text-gray-300">
+                Some link
+              </Link>
             </li>
             <li>
-              <Link href="/">Another Link</Link>
+              <Link href="/" className="text-white hover:text-gray-300">
+                Another Link
+              </Link>
             </li>
           </ul>
 

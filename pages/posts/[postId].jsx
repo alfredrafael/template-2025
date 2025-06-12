@@ -59,10 +59,8 @@ export default function PostPage({ post }) {
       </Head>
       <div className="pageContainer">
         <PostHeader
-          post={post} // post object passed directly
-          // title={isTranslated ? post.spanishTitle : post.title}
-          // subtitle={isTranslated ? post.spanishSubtitle : post.subtitle}
           searchBar
+          post={post} // post object passed directly
         />
         <PostContent />
         <section className="my-12">

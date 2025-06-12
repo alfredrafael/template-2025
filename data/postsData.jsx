@@ -5,7 +5,7 @@ export const postsData = [
     spanishTitle: "Perros Muy Grandes",
     subtitle: "Some dogs are big. Huge even. Incredible, right?",
     spanishSubtitle: "Algunos perros son enormes. Gigantes, incluso.",
-    category: ["Dogs", "Canines"],
+    category: ["Pets", "Canines"],
     spanishCategory: ["Perros", "Caninos"],
     featuredImage:
       "https://images.unsplash.com/photo-1585563563490-bbab51a9ab77?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -19,7 +19,7 @@ export const postsData = [
     spanishTitle: "S",
     subtitle: "This is an example post content 2.",
     spanishSubtitle: "Ejemplo de contenido de publicación 2.",
-    category: ["Cats", "Felines"],
+    category: ["Pets", "Felines"],
     spanishCategory: ["Gatos", "Felinos"],
     featuredImage:
       "https://images.unsplash.com/photo-1524132989408-c8ee48d8f147?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -33,7 +33,7 @@ export const postsData = [
     spanishTitle: "Perros Muy Pequeños",
     subtitle: "Some dogs are small. Tiny even.",
     spanishSubtitle: "Algunos perros son pequeños. Minúsculos, incluso.",
-    category: ["Dogs", "Canines"],
+    category: ["Pets", "Canines"],
     spanishCategory: ["Perros", "Caninos"],
     featuredImage:
       "https://images.unsplash.com/photo-1533150783171-ce47d5c2b6ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -47,7 +47,7 @@ export const postsData = [
     spanishTitle: "Gatos Muy Pequeños",
     subtitle: "Some cats are small. Tiny even.",
     spanishSubtitle: "Algunos gatos son pequeños. Minúsculos, incluso.",
-    category: ["Cats", "Felines"],
+    category: ["Pets", "Felines"],
     spanishCategory: ["Gatos", "Felinos"],
     featuredImage:
       "https://images.unsplash.com/photo-1745750747228-d7ae37cba3a5?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
