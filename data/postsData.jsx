@@ -9,8 +9,8 @@ export const postsData = [
     spanishCategory: ["Perros", "Caninos"],
     featuredImage:
       "https://images.unsplash.com/photo-1585563563490-bbab51a9ab77?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageSource: "Unsplash",
-    imageSourceLink: "https://unsplash.com/photos/2zDw14yCYU4",
+    photoCreditName: "Unsplash",
+    photoCreditLink: "https://unsplash.com/photos/2zDw14yCYU4",
     tags: ["Canines", "Pets", "Dogs", "Dog", "Animals", "Mascotas", "Caninos"],
   },
   {
@@ -23,8 +23,8 @@ export const postsData = [
     spanishCategory: ["Gatos", "Felinos"],
     featuredImage:
       "https://images.unsplash.com/photo-1524132989408-c8ee48d8f147?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageSource: "Andy Holmes",
-    imageSourceLink: "https://unsplash.com/photos/bengal-tiger-sym5TTE2ks0",
+    photoCreditName: "Andy Holmes",
+    photoCreditLink: "https://unsplash.com/photos/bengal-tiger-sym5TTE2ks0",
     tags: ["Tiger", "Cats", "Cat", "Felines"],
   },
   {
@@ -37,8 +37,8 @@ export const postsData = [
     spanishCategory: ["Perros", "Caninos"],
     featuredImage:
       "https://images.unsplash.com/photo-1533150783171-ce47d5c2b6ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageSource: "Unsplash",
-    imageSourceLink: "https://unsplash.com/photos/2zDw14yCYU4",
+    photoCreditName: "Unsplash",
+    photoCreditLink: "https://unsplash.com/photos/2zDw14yCYU4",
     tags: ["Tag 1", "Tag 2", "Tag 3"],
   },
   {
@@ -51,8 +51,8 @@ export const postsData = [
     spanishCategory: ["Gatos", "Felinos"],
     featuredImage:
       "https://images.unsplash.com/photo-1745750747228-d7ae37cba3a5?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageSource: "Erik-Jan Leusink",
-    imageSourceLink:
+    photoCreditName: "Erik-Jan Leusink",
+    photoCreditLink:
       "https://unsplash.com/photos/selective-focus-photo-of-gray-tabby-cat-IbPxGLgJiMI",
     tags: ["Kitty", "Cat", "Gato"],
   },

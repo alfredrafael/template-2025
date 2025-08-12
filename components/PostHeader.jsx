@@ -120,7 +120,7 @@ export default function PostHeader({ post, className = "" }) {
             </div>
           </div>
         </div>
-        <hr className="border-gray-300mt-3 mb-4" />
+        <hr className="border-gray-300mt-3 my-4" />
       </div>
     </header>
   );
