@@ -25,6 +25,7 @@ function Application({ Component, pageProps }) {
           bgColor={"#040182"}
           dropDownBg={"#37358c"}
           dropDownBgHover={"#222080"}
+          showLanguageToggle={true} // Set to true to show the language toggle
         />
         <Component {...pageProps} />
         <Footer />

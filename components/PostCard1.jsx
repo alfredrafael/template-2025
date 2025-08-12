@@ -7,7 +7,7 @@ const PostCard1 = ({ cardImage, cardTitle, cardText }) => {
   const fallbackImage = ""; // Fallback image
   return (
     <Card
-      className=""
+      className="shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 ease-in-out"
       variant="outlined"
       sx={{
         borderRadius: 4,

@@ -23,7 +23,7 @@ export default function AllPostsPage() {
 
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-y-8 gap-y-6 list-none">
         {postsData.map((post) => (
-          <li className="shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 ease-in-out">
+          <li>
             <Link
               href={
                 !isTranslated
